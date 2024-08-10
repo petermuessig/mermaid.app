@@ -1,0 +1,17 @@
+{
+  "generator-ui5-app": {
+    "namespace": "mermaid.app",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.127.0",
+    "author": "Peter Muessig",
+    "initrepo": true,
+    "appId": "mermaid.app",
+    "appURI": "mermaid/app",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "qunitCoverageFile": "qunit-coverage-istanbul.js",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "setupCompleted": true
+  }
+}

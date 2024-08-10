@@ -1,0 +1,21 @@
+specVersion: "3.0"
+metadata:
+  name: mermaid.app
+type: application
+framework:
+  name: SAPUI5
+  version: "1.127.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+builder:
+  resources:
+    excludes:
+      - "test/e2e/**"
+server:
+  customMiddleware:
+    - name: "@ui5/middleware-code-coverage"
+      afterMiddleware: compression
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
