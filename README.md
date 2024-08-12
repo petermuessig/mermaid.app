@@ -82,6 +82,24 @@ npm run lint
 
 (Again, when using yarn, do `yarn lint` instead.)
 
+## Steps to Create this Project
+
+Prerequisites: Yeoman and Easy-UI5 generator to be installed: `npm i -g yo generator-easy-ui5`.
+
+1. Somewhere in shell: `yo easy-ui5 app`
+  * namespace: `mermaid.app`
+  * framework: `SAPUI5`
+  * version: `1.127.0`
+2. In project: `npm i -D ui5-tooling-modules`
+  * configure it in `ui5.yaml`
+3. In project: `npm i mermaid`
+4. In `Main.controller.js`
+   ```js
+   sap.ui.define([..., "mermaid"], function(..., mermaid) {
+     mermaid.initialize({ startOnLoad: true });
+   });
+   ```
+
 ## License
 
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.

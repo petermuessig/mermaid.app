@@ -16,17 +16,27 @@
 		"karma": "karma start",
 		"karma-ci": "karma start karma-ci.conf.js",
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
-		"test": "npm run lint && npm run karma-ci-cov"
+		"test": "npm run lint && npm run karma-ci-cov",
+		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.js"
 	},
 	"devDependencies": {
-		"@ui5/cli": "^3.11.0",
-		"@ui5/middleware-code-coverage": "^1.1.1",
-		"eslint": "^8.57.0",
-		"karma": "^6.4.3",
+		"@ui5/cli": "^4.0.4",
+		"@ui5/middleware-code-coverage": "^2.0.0",
+		"@wdio/cli": "^8.40.2",
+		"@wdio/local-runner": "^8.40.2",
+		"@wdio/mocha-framework": "^8.40.2",
+		"@wdio/spec-reporter": "^8.39.0",
+		"eslint": "^9.9.0",
+		"karma": "^6.4.4",
 		"karma-chrome-launcher": "^3.2.0",
 		"karma-coverage": "^2.2.1",
-		"karma-ui5": "^3.0.4",
-		"rimraf": "^5.0.7",
-		"ui5-middleware-livereload": "^3.0.3"
+		"karma-ui5": "^4.0.1",
+		"rimraf": "^6.0.1",
+		"ui5-middleware-livereload": "^3.0.3",
+		"ui5-tooling-modules": "^3.9.0",
+		"wdio-ui5-service": "^2.0.9"
+	},
+	"dependencies": {
+		"mermaid": "^10.9.1"
 	}
 }
