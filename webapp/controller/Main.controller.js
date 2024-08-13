@@ -1,7 +1,5 @@
-sap.ui.define(["./BaseController", "sap/m/MessageBox", "mermaid/dist/mermaid"], function (BaseController, MessageBox, mermaid) {
+sap.ui.define(["./BaseController", "sap/m/MessageBox"], function (BaseController, MessageBox) {
 	"use strict";
-
-	mermaid.initialize({ startOnLoad: true });
 
 	return BaseController.extend("mermaid.app.controller.Main", {
 		sayHello: function () {

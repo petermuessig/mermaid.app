@@ -4,6 +4,7 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
+  xmlns:mermaid="mermaid.app.control"
 	core:require="{
 		formatter: 'mermaid/app/model/formatter'
 	}">
@@ -12,18 +13,20 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
+      <VBox>
+        <mermaid:Mermaid
+          id="mermaid"
+          definition='graph TD\n
+            A[Client] --> B[Load Balancer]\n
+            B --> C[Server1]\n
+            B --> D[Server2]\n
+            click A "https://sdk.openui5.org" "label"\n
+            click B callback "Tooltip for B"\n' />
 					<Button
 						id="helloButton"
 						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
 						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			</VBox>
 		</content>
 	</Page>
 
